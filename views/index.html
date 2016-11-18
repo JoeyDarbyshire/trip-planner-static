@@ -1,22 +1,82 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1>Welcome!</h1>
-<div>
-  <select>
-    {% for hotel in hotels %}
-    <option>{{ hotel.name }}</option>
-    {% endfor %}
-  </select>
-  <select>
-    {% for restaurant in restaurants %}
-    <option>{{ restaurant.name }}</option>
-    {% endfor %}
-  </select>
-  <select>
-    {% for activity in activities %}
-    <option>{{ activity.name }}</option>
-    {% endfor %}
-  </select>
+<div class="not-bootstrap-container">
+  <div class="row">
+    <div class="col-md-8" style="background-color: black;">
+      <div style="height:300px; color: white;"> This will be our map! </div>
+    </div>
+    <div class="col-md-4" style="background-color: tan;">
+      <div class="row interface">
+        <div class="dropdowns bubble-box">
+          <div class="dropdown-div">
+            <div class="dropdown-title">Hotels</div>
+            <div class="row">
+              <div class="col-sm-11">
+                <select>
+                {% for hotel in hotels %}
+                <option>{{ hotel.name }}</option>
+                {% endfor %}
+                </select>
+              </div>
+              <div class="col-sm-1">
+                <div class="add-button">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-div">
+            <div class="dropdown-title">Restaurants</div>
+            <div class="row">
+              <div class="col-sm-11">
+                <select>
+                {% for restaurant in restaurants %}
+                <option>{{ restaurant.name }}</option>
+                {% endfor %}
+                </select>
+              </div>
+              <div class="col-sm-1">
+                <div class="add-button">+</div>
+              </div>
+            </div>
+          </div>
+          <div class="dropdown-div">
+            <div class="dropdown-title">Activities</div>
+            <div class="row">
+              <div class="col-sm-11">
+                <select>
+                {% for activity in activities %}
+                <option>{{ activity.name }}</option>
+                {% endfor %}
+                </select>
+              </div>
+              <div class="col-sm-1">
+                <div class="add-button">+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="day-title">
+          <span id="day">Day 2</span>
+          <div class="remove-button">x</div>
+        </div>
+      </div><!-- end row -->
+      <div class="row interface">
+        <div class="schedule bubble-box">
+          <div class="row" id="day-list">
+          <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+          </ul>
+          </div><!--end button row -->
+          <div class="row">
+
+          </div><!--end schedule row -->
+        </div><!-- End Schedule -->
+      </div><!-- end row -->
+    </div>
+  </div>
 </div>
 {% endblock %}
