@@ -1,0 +1,26 @@
+{
+  "name": "tripplanner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon -e js,html,scss server.js",
+    "build-css": "node-sass -w -r assets/stylesheets -o public/stylesheets",
+    "seed": "node seed.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "nunjucks": "^3.0.0",
+    "pg": "^6.1.0",
+    "sequelize": "^3.27.0",
+    "volleyball": "^1.4.1"
+  },
+  "devDependencies": {
+    "node-sass": "^3.13.0",
+    "nodemon": "^1.11.0"
+  }
+}
