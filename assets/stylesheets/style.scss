@@ -25,8 +25,27 @@
 .glyphicon-map-marker {
   font-size: 22px;
 }
-.interface {
-  padding: 15px;
+
+#map {
+  padding-right: 0px;
+}
+
+#map-canvas {
+  height: 90vh;
+}
+
+.col-xs-1 {
+  padding-left: 0;
+}
+
+#information {
+  background-color: #b6afa6;
+  #top .bubble-box {
+    background-color: #e8e4e4;
+  }
+  #top .col-xs-1 {
+    margin-left: -5px;
+  }
 }
 
 .bubble-box {
@@ -38,6 +57,7 @@
     font-size: 18px;
     margin-bottom: 10px;
     margin-top: 10px;
+    color: #b7b7b6;
   }
   select {
     display: block;
@@ -63,19 +83,23 @@
   padding-left:0;
   }
 }
-.day-title{
+.day-title {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  border-radius: 10px;
-  border: #333333 solid 1px;
-  width: 33%;
-  padding: 5px 2px;
-  margin-bottom: 15px;
-}
-
-#day {
-  font-size: 25px;
+  border-radius: 5px;
+  border: rgba(78, 63, 45, 0.82) solid 1px;
+  width: 105px;
+  padding: 3px 2px;
+  margin-top: 15px;
+  color: rgba(78, 63, 45, 0.82);
+  #day {
+  font-size: 23px;
+  margin-left: 0px;
+  }
+  .remove-button {
+    margin-top: 5px;
+  }
 }
 
 .remove-button {
@@ -91,15 +115,65 @@
   margin-right: 5px;
 }
 
+.interface {
+  padding: 15px;
+}
+
+#itinerary {
+  padding:15px;
+  .col-xs-1 {
+  padding-right: 0;
+  }
+  .col-xs-11 {
+    padding-left: 0;
+  }
+  .remove-button {
+    margin-top: 2px;
+  }
+}
+
 #day-list {
   background-color: rgba(78,63,45,0.82);
+  color: rgba(216, 232, 241, 0.85);
   margin-top: -15px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   ul {
     list-style: none;
+    margin-top: 10px;
+    padding-left: 15px;
     li {
-      display: inline;
+      display: inline-block;
+      border-radius: 50%;
+      border: rgba(216, 232, 241, 0.85) solid 2px;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      padding-top: 5px;
+      font-size: 12px;
+      &:hover {
+        cursor: pointer;
+      }
     }
+    li.active {
+      background-color: rgba(216, 232, 241, 0.85);
+      color: rgba(78,63,45,0.82);
+    }
+  }
+  .remove-button {
+    margin-top:0;
+  }
+}
+
+.remove-button:hover,
+.add-button {
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+  #information {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-right: 0;
   }
 }

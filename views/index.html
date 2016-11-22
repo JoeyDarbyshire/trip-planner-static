@@ -3,23 +3,23 @@
 {% block content %}
 <div class="not-bootstrap-container">
   <div class="row">
-    <div class="col-md-8" style="background-color: black;">
-      <div style="height:300px; color: white;"> This will be our map! </div>
+    <div class="col-sm-8" id="map">
+      <div id="map-canvas"></div>
     </div>
-    <div class="col-md-4" style="background-color: tan;">
-      <div class="row interface">
+    <div class="col-sm-4" id="information">
+      <div class="row interface" id="top">
         <div class="dropdowns bubble-box">
           <div class="dropdown-div">
             <div class="dropdown-title">Hotels</div>
             <div class="row">
-              <div class="col-sm-11">
+              <div class="col-xs-11">
                 <select>
                 {% for hotel in hotels %}
                 <option>{{ hotel.name }}</option>
                 {% endfor %}
                 </select>
               </div>
-              <div class="col-sm-1">
+              <div class="col-xs-1">
                 <div class="add-button">+</div>
               </div>
             </div>
@@ -27,14 +27,14 @@
           <div class="dropdown-div">
             <div class="dropdown-title">Restaurants</div>
             <div class="row">
-              <div class="col-sm-11">
+              <div class="col-xs-11">
                 <select>
                 {% for restaurant in restaurants %}
                 <option>{{ restaurant.name }}</option>
                 {% endfor %}
                 </select>
               </div>
-              <div class="col-sm-1">
+              <div class="col-xs-1">
                 <div class="add-button">+</div>
               </div>
             </div>
@@ -42,14 +42,14 @@
           <div class="dropdown-div">
             <div class="dropdown-title">Activities</div>
             <div class="row">
-              <div class="col-sm-11">
+              <div class="col-xs-11">
                 <select>
                 {% for activity in activities %}
                 <option>{{ activity.name }}</option>
                 {% endfor %}
                 </select>
               </div>
-              <div class="col-sm-1">
+              <div class="col-xs-1">
                 <div class="add-button">+</div>
               </div>
             </div>
@@ -67,12 +67,55 @@
           <div class="row" id="day-list">
           <ul>
             <li>1</li>
-            <li>2</li>
+            <li class="active">2</li>
             <li>3</li>
+            <li>+</li>
           </ul>
           </div><!--end button row -->
-          <div class="row">
-
+          <div class="row" id="itinerary">
+            <div class="dropdown-title">My Hotel</div>
+            <div class="col-xs-11">
+              <div class="list-text">
+                Andaz Wall Street
+              </div>
+            </div>
+            <div class="col-xs-1">
+              <div class="remove-button">x</div>
+            </div>
+            <div class="dropdown-title">My Restaurants</div>
+            <div class="col-xs-11">
+              <div class="list-text">
+                The Capital Grille
+              </div>
+            </div>
+            <div class="col-xs-1">
+              <div class="remove-button">x</div>
+            </div>
+            <div class="col-xs-11">
+              <div class="list-text">
+                Bouley
+              </div>
+            </div>
+            <div class="col-xs-1">
+              <div class="remove-button">x</div>
+            </div>
+            <div class="dropdown-title">My Activities</div>
+            <div class="col-xs-11">
+              <div class="list-text">
+                Mahayana Temple Buddhist Association
+              </div>
+            </div>
+            <div class="col-xs-1">
+              <div class="remove-button">x</div>
+            </div>
+            <div class="col-xs-11">
+              <div class="list-text">
+                South Street Seaport
+              </div>
+            </div>
+            <div class="col-xs-1">
+              <div class="remove-button">x</div>
+            </div>
           </div><!--end schedule row -->
         </div><!-- End Schedule -->
       </div><!-- end row -->

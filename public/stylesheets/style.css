@@ -21,8 +21,21 @@
 .glyphicon-map-marker {
   font-size: 22px; }
 
-.interface {
-  padding: 15px; }
+#map {
+  padding-right: 0px; }
+
+#map-canvas {
+  height: 90vh; }
+
+.col-xs-1 {
+  padding-left: 0; }
+
+#information {
+  background-color: #b6afa6; }
+  #information #top .bubble-box {
+    background-color: #e8e4e4; }
+  #information #top .col-xs-1 {
+    margin-left: -5px; }
 
 .bubble-box {
   background-color: white;
@@ -32,7 +45,8 @@
   .bubble-box .dropdown-title {
     font-size: 18px;
     margin-bottom: 10px;
-    margin-top: 10px; }
+    margin-top: 10px;
+    color: #b7b7b6; }
   .bubble-box select {
     display: block;
     width: 100%; }
@@ -56,14 +70,17 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  border-radius: 10px;
-  border: #333333 solid 1px;
-  width: 33%;
-  padding: 5px 2px;
-  margin-bottom: 15px; }
-
-#day {
-  font-size: 25px; }
+  border-radius: 5px;
+  border: rgba(78, 63, 45, 0.82) solid 1px;
+  width: 105px;
+  padding: 3px 2px;
+  margin-top: 15px;
+  color: rgba(78, 63, 45, 0.82); }
+  .day-title #day {
+    font-size: 23px;
+    margin-left: 0px; }
+  .day-title .remove-button {
+    margin-top: 5px; }
 
 .remove-button {
   float: right;
@@ -77,12 +94,51 @@
   margin-top: 8px;
   margin-right: 5px; }
 
+.interface {
+  padding: 15px; }
+
+#itinerary {
+  padding: 15px; }
+  #itinerary .col-xs-1 {
+    padding-right: 0; }
+  #itinerary .col-xs-11 {
+    padding-left: 0; }
+  #itinerary .remove-button {
+    margin-top: 2px; }
+
 #day-list {
   background-color: rgba(78, 63, 45, 0.82);
+  color: rgba(216, 232, 241, 0.85);
   margin-top: -15px;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px; }
   #day-list ul {
-    list-style: none; }
+    list-style: none;
+    margin-top: 10px;
+    padding-left: 15px; }
     #day-list ul li {
-      display: inline; }
+      display: inline-block;
+      border-radius: 50%;
+      border: rgba(216, 232, 241, 0.85) solid 2px;
+      height: 30px;
+      width: 30px;
+      text-align: center;
+      padding-top: 5px;
+      font-size: 12px; }
+      #day-list ul li:hover {
+        cursor: pointer; }
+    #day-list ul li.active {
+      background-color: rgba(216, 232, 241, 0.85);
+      color: rgba(78, 63, 45, 0.82); }
+  #day-list .remove-button {
+    margin-top: 0; }
+
+.remove-button:hover,
+.add-button {
+  cursor: pointer; }
+
+@media only screen and (max-width: 767px) {
+  #information {
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-right: 0; } }
